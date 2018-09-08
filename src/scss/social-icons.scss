@@ -1,0 +1,36 @@
+%social {
+						margin-right: calc-size(7);
+						display: flex;
+						flex-direction: row;
+					li {
+						width: calc-size(34);
+						height: calc-size(34);
+						background: #dedede;
+						border-radius: 50%;
+						margin: 0 calc-size(3.5);
+						position: relative;
+						transition: all 0.5s ease;
+						
+						a {
+							img {
+								width: calc-size(20);
+								height: calc-size(20);
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+							}
+						}
+					}
+					.facebook:hover {
+						background: #4f689e;
+					}
+
+					.twitter:hover {
+						background: #74c7d5;
+					}
+
+					.google:hover {
+						background: #df5c64;
+					}
+				}
