@@ -102,13 +102,20 @@
 					}
 				}
 			}
+}
 
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+   .about {
+    	background-image: url("../img/head-image_retina.JPG");
+	}
 }
 
 .about {
 	overflow: hidden;
 	display: flex;
-	padding: calc-size(79) 0;
+	padding: calc-size(76) 0 calc-size(80) 0;
 	background-image: url("../img/head-image.JPG");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -177,7 +184,7 @@
 }
 
 .management {
-	padding: calc-size(150) 0 calc-size(30) 0;
+	padding: calc-size(153) 0 calc-size(28) 0;
 		h2{
 			text-transform: uppercase;
 			color: $primary-color;
@@ -193,7 +200,7 @@
 				width: calc-size(78);
 				height: calc-size(2);
 				background-color: $second-color;
-				top:250%;
+				top:245%;
 				left:50%;
 				transform: translateX(-50%);
 			}
@@ -299,7 +306,7 @@
 
 		.slide {
 			height: calc-size(330);
-			display: flex;
+			display: flex!important;
 			flex-direction: column;
 			align-items: center;
 			text-align: center;
@@ -348,7 +355,7 @@
 }
 
 .subscribe {
-	padding: calc-size(75) 0 calc-size(43) 0;
+	padding: calc-size(73) 0 calc-size(40) 0;
 	width: 100%;
 	background-color: #2b2f35;
 	h4 {
@@ -376,7 +383,11 @@
 		}
 	}
 	.contact-info {
-		p{
+		address{
+			color: #6e7279;
+			font-size: calc-size(14);
+			font-family: 'OpenSans' sans-serif;
+			font-weight: 400;
 			line-height: calc-size(20); 
 			a {
 				color: inherit;

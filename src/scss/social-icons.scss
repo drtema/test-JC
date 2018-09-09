@@ -22,6 +22,13 @@
 							}
 						}
 					}
+					.facebook {
+						a {
+							img {
+								width: calc-size(13);
+							}
+						}
+					}
 					.facebook:hover {
 						background: #4f689e;
 					}

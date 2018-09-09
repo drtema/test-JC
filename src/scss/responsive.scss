@@ -1,4 +1,11 @@
 @media only screen and (max-width: 768px) {
+    .nextArr {
+        left:100%;
+    }
+    .previousArr {
+        right: 100%;
+    }
+
     .slick-arrow{
                 width: mobile-size(34);
                 height: mobile-size(34);
@@ -135,8 +142,15 @@
 							margin: 0 mobile-size(3.5);
 							a {
 								img {
-								width: 50%;
+								width: auto;
 								height: 50%;
+								}
+							}
+						}
+						.facebook {
+							a {
+								img {
+									width: auto;
 								}
 							}
 						}
@@ -215,7 +229,8 @@
 			}
 		}
 		.contact-info {
-			p{
+			address{
+				font-size: mobile-size(14);
 				line-height: mobile-size(20); 
 			}
 		}

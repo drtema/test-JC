@@ -99,22 +99,13 @@
     display: none;
 }
 .nextArr {
-    left:98.5%;
+    left:102%;
 }
 .previousArr {
-    right: 98.5%;
+    right: 102%;
 }
 
-@media only screen and (max-width: 768px) {
-    .slick-arrow{
-                width: mobile-size(34);
-                height: mobile-size(34);
-                img {
-                    width: mobile-size(15);
-                    height: mobile-size(15);
-                }
-            }
-}
+
 .slick-arrow{
                 vertical-align: middle;
                 width: calc-size(34);

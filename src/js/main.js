@@ -32,7 +32,6 @@ function emailValidation() {
 function burgerMenu() {
 	 $(".hamburger").on("click", function(e) {
 	  $(".hamburger").toggleClass("is-active");
-	   // Do something else, like open/close menu
 	   $(".burger-menu").toggleClass("active");
 	    $(".burger-menu").css({
 	    	'margin-left' : '0'
@@ -42,7 +41,7 @@ function burgerMenu() {
 function slickSlider(){
 	$('.slider').slick({
 	    adaptiveHeight:true,
-	    autoplay:true,
+	    //autoplay:true,
 	    pauseOnHover:true,
 	    swipeToSlide:true,
 	    prevArrow: '<button type="button" class="previousArr"><img src="img/chevron-left.svg"></button>',
