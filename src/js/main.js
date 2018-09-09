@@ -1,5 +1,5 @@
 function emailValidation() {
-	$('#email').change(function() {
+	$('#email').on('change keypress focus',function() {
 				if($(this).val() != '') {
 					var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 					if(pattern.test($(this).val())){
@@ -29,7 +29,16 @@ function emailValidation() {
 		}
 	});
 }
-
+function burgerMenu() {
+	 $(".hamburger").on("click", function(e) {
+	  $(".hamburger").toggleClass("is-active");
+	   // Do something else, like open/close menu
+	   $(".burger-menu").toggleClass("active");
+	    $(".burger-menu").css({
+	    	'margin-left' : '0'
+	    });
+	 });
+}
 function slickSlider(){
 	$('.slider').slick({
 	    adaptiveHeight:true,
@@ -45,4 +54,5 @@ function slickSlider(){
 $(document).ready(function(){
       slickSlider();
 	  emailValidation();
+	  burgerMenu();
   });

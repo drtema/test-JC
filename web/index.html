@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DEFAULT</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Raleway:400,500,600,700" rel="stylesheet">		
 </head>
@@ -15,8 +15,14 @@
 		<header class="header">
 			<div class="header-container">
 				<div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+
+				<button class="hamburger hamburger--squeeze" type="button">
+					  <span class="hamburger-box">
+					    <span class="hamburger-inner"></span>
+					  </span>
+				</button>
+
 				<nav class="nav">
-					<a href="#" class="btn-nav"><span></span></a>
 					<ul>
 						<li><a href="#">HOME</a></li>
 						<li><a href="#">ABOUT</a></li>
@@ -24,26 +30,30 @@
 						<li><a href="#">PORTFOLIO</a></li>
 						<li><a href="#">CONTACT</a></li>
 					</ul>
-				</nav>		
+				</nav>	
 			</div>
+			<nav class="burger-menu">
+					<a href="#">HOME</a>
+					<a href="#">ABOUT</a>
+					<a href="#">SERVICE</a>
+					<a href="#">PORTFOLIO</a>
+					<a href="#">CONTACT</a>
+			</nav>	
 		</header>
 
-		<div class="about">
-
-			<div class="about-container">
-				<h1>More About US</h1>
-				<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful.</p>
+		<section class="about">
+			<div class="header-container">
+				<div class="about-container">
+					<h1>More About US</h1>
+					<p>We are a fairly small, flexible design studio that designs for print and web. We work 	flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful.</p>
+				</div>
 			</div>
-		</div>
+		</section>
 		<main class="main">
 			<section class="management">
 				<div class="container">
-					<div class="h2">
 						<h2>management</h2>
-						<div class="border"></div>
-					</div>
-					<ul class="cards">
-						<li>
+					<div class="cards">
 							<div class="card">
 						  		<img src="img/pic1.jpg" alt="Avatar1">
 						 		<div class="card-container">
@@ -58,8 +68,6 @@
 						    		</ul> 
 						 		</div>
 							</div>
-						</li>
-						<li>
 							<div class="card">
 						  		<img src="img/pic2.jpg" alt="Avatar2">
 						 		<div class="card-container">
@@ -74,8 +82,6 @@
 						    		</ul> 
 						 		</div>
 							</div>
-						</li>
-						<li>
 							<div class="card">
 						  		<img src="img/pic3.jpg" alt="Avatar3">
 						 		<div class="card-container">
@@ -90,52 +96,52 @@
 						    		</ul> 
 						 		</div>
 							</div>
-						</li>
-					</ul>
+					</div>
 					<button class="show" type="button">Show All</button>
 				</div>
 			</section>
 			
 			<section class="management reviews">
 				<div class="container">
-					<div class="h2">
-						<h2>WHAT OUR CLIENTS SAY</h2>
-						<div class="border"></div>
-					</div>
+					<h2>WHAT OUR CLIENTS SAY</h2>
 					<div class="slider">
-						<div class="slide">
+						<blockquote class="slide">
 							<img src="img/avatar.jpg" alt="ava">
-							<p class="review-description">Praesent tincidunt molestie libero mollis porta. Faucibus leo, ac aliquet magna. Vivamus ullamcorper mollis leo, at sagittis mi pellentesque quis. Praesent nec elit tristique.</p>
-							<p class="review-writer">Larry Jane</p>
-							<p class="review-writer-post">General Manager</p>
-						</div>
-						<div class="slide">
+							<q>Praesent tincidunt molestie libero mollis porta. Faucibus leo, ac aliquet magna. Vivamus ullamcorper mollis leo, at sagittis mi pellentesque quis. Praesent nec elit tristique.</q>
+							<cite>		
+								<span class="name">Larry Jane</span>
+								<span class="post">General Manager</span>
+							</cite>
+						</blockquote>
+						<blockquote class="slide">
 							<img src="img/avatar-sm.jpg" alt="ava">
-							<p class="review-description">Where is MJ?</p>
-							<p class="review-writer">Spider Man</p>
-							<p class="review-writer-post">Hero</p>
-						</div>
+							<q>Where is MJ?</q>
+							<cite>	
+								<span class="name">Spider Man</span>
+								<span class="post">Hero</span>
+							</cite>
+						</blockquote>
 					</div>
 				</div>
 			</section>
 			
 			<section class="subscribe">
-				<div class="container">
+				<div class="column container">
 					<div class="about-info">
 						<h4>ABOUT FAPOR</h4>
 						<p>We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful.</p>
 					</div>
-					<div class="contact-info">
+					<div class="column contact-info">
 						<h4>Contact INFO</h4>
 						<p>
 							PO Box 17122 Nollins Street<br>
 							5034 Los Angelos<br>
 							<br>
-							Phone: 1800555.0658<br>
-							Email: support@fapor.com<br>
-							Web: fapor.com</p>
+							Phone: <a href="tel:+8005550658">+8005550658</a><br>
+							Email: <a href="mailto:support@fapor.com">support@fapor.com</a><br>
+							Web: <a href="http://fapor.com/">fapor.com</a></p>
 					</div>
-					<form class="subscribe-form" method="post" action="#">
+					<form class="column subscribe-form" method="post" action="#">
 						<h4>Subscribe to our newsletter</h4>
 							<input type="email" id="email" required="true" placeholder="Enter your email address">
 						<button type="submit">Subscribe Now</button>
@@ -156,8 +162,7 @@
 		</footer>
 	</div>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="slick/slick.min.js"></script>
 <script src="js/libs/libs.js"></script>
 <script src="js/main.js"></script>
