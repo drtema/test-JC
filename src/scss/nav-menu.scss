@@ -1,14 +1,15 @@
 .nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	align-content: center;
 	z-index: 10;
 		ul{
 			display: flex;
 			justify-content: space-between;
-			a {	
+			li {
 				margin:0 calc-size(33);
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+			a {	
 				position: relative;
 				color: #fff;
 				font-size: calc-size(14);
@@ -16,7 +17,7 @@
 				font-family: 'OpenSans' sans-serif;
 				text-align: center;
 				&:hover{
-					&::after {
+					&:after {
 						content: ''; 
 					    position: absolute;
 					    top:50%;
@@ -26,15 +27,9 @@
 					  	width: 120%;
 					}
 				}
-				&:last-child{
-					margin-right: 0;
-				}
+				
 			}
 		}						
-}
-.nav.active {
-	display: flex!important;
-	opacity: 1; max-height: 10000px; overflow: hidden; visibility: visible;
 }
 
 @media only screen and(max-width: 767px) {
@@ -47,30 +42,34 @@
 		bottom: 0;
 		opacity: 1;
 		visibility: hidden;
-		transition: all 0.3s ease;
+		transition: all 0.5s ease;
 		z-index: 4;
 	}
 
 	.nav {
-		transition:all 0.5 ease;
-		opacity: 0; max-height: 0; overflow: hidden; visibility: hidden;
+		transition: all 0.5s ease;
+		opacity: 0; 
+		max-height: 0; 
+		overflow: hidden; 
+		visibility: hidden;
 		width: 100%;
-		display: none;
-		flex-direction: column;
 		position: absolute;
 		top:mobile-size(97);
 		left:0;
 		z-index: 3;
 		background-color: $primary-color;
+
+		&.active {
+			opacity: 1; 
+			max-height: 10000px; 
+			visibility: visible;
+		}
+
 		ul {
-			flex-direction: column;
-			width: 100%;
-			align-items: center;
+			display: block;
 			li {
-				width: 100%;
-				position:relative;
+				margin: 0;
 				text-align: center;
-				padding:calc-size(33) 0;
 				border-top: mobile-size(1) solid $second-color;
 				&:last-child {
 					border-bottom: mobile-size(1) solid $second-color;
@@ -80,16 +79,11 @@
 					}
 				a {
 					display:block;
-					width: 100%;
-					color: #fff;
+					padding:calc-size(33) 0;
 					font-size: mobile-size(14);
 					line-height:mobile-size(24); 
-					font-family: 'OpenSans' sans-serif;
-					text-align: center;
-					height: auto;
-					margin: 0;
 					
-						&::after {
+						&:after {
 							display: none;
 						}
 				}
