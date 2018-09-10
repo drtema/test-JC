@@ -15,7 +15,7 @@
 @import "social-icons";
 @import "hamburger-button";
 @import "responsive";
-
+@import "nav-menu";
 
 .pixel-perfect { 
 	position:absolute;
@@ -41,21 +41,12 @@
 	align-items: center;
 }
 
-.burger-menu {
-	display: none;
-}
-
-.active {
-			display: flex!important;
-			transition: all 0.5s ease;
-		}
 .header  {
 		overflow: hidden;
 		padding: calc-size(37) 0;
 		background-color: $primary-color;
 		display: flex;
 		align-items: center;
-			
 			.logo {
 				
 				a{
@@ -63,45 +54,7 @@
 						height: calc-size(23);
 					}
 				}
-			}
-			
-			.nav {
-				display: flex;
-				ul {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					align-content: center;
-					li {
-						display: flex;
-						padding:0 calc-size(33);
-						align-items: center;
-						a {	
-							position: relative;
-							color: #fff;
-							font-size: calc-size(14);
-							line-height:calc-size(24); 
-							font-family: 'OpenSans' sans-serif;
-							text-align: center;
-							&:hover{
-								&::after {
-									content: ''; 
-								    position: absolute;
-								    top:50%;
-									transform: translate(-80%, calc-size(100)/2- calc-size(2));
-								    border-bottom: calc-size(2) solid $second-color;
-								  	width: 150%;
-								}
-							}
-							
-						}
-						&:last-child{
-							padding-right: 0;
-						}
-
-					}
-				}
-			}
+			}		
 }
 
 @media 
@@ -159,7 +112,7 @@
 
 .main {
 	width: 100%;
-	section{
+	section,.subscribe{
 		display: flex;
 		overflow: hidden;
 		justify-content: center;

@@ -29,19 +29,49 @@ function emailValidation() {
 		}
 	});
 }
-function burgerMenu() {
+function navMenu() {
+	const overlay = document.createElement('div');
+	overlay.id = 'overlay';
+	let overlayVibility = false;
+	
 	 $(".hamburger").on("click", function(e) {
 	  $(".hamburger").toggleClass("is-active");
-	   $(".burger-menu").toggleClass("active");
-	    $(".burger-menu").css({
-	    	'margin-left' : '0'
-	    });
+	   $(".nav").toggleClass("active");
+	    $(".header").append(overlay);
+	    if (overlayVibility == false) {
+	    	$("#overlay").css({
+				'opacity' : '0.5',
+				'visibility' : 'visible'
+			});
+			overlayVibility = true;
+	    	overlayHandler();
+			
+	    } else {
+	    	$("#overlay").css({
+				'opacity' : '0',
+				'visibility' : 'hidden'
+			});
+			overlayVibility = false;
+			overlayHandler();
+	    }
+		function overlayHandler(){
+			$("#overlay").on("click", function() {
+						$("#overlay").css({
+							'opacity' : '0',
+							'visibility' : 'hidden'
+						});
+						overlayVibility = false;
+						$(".hamburger").removeClass("is-active");
+						$(".nav").removeClass("active");
+						console.log(overlayVibility);
+					});
+		}
 	 });
 }
 function slickSlider(){
 	$('.slider').slick({
 	    adaptiveHeight:true,
-	    //autoplay:true,
+	    autoplay:true,
 	    pauseOnHover:true,
 	    swipeToSlide:true,
 	    prevArrow: '<button type="button" class="previousArr"><img src="img/chevron-left.svg"></button>',
@@ -53,5 +83,5 @@ function slickSlider(){
 $(document).ready(function(){
       slickSlider();
 	  emailValidation();
-	  burgerMenu();
+	  navMenu();
   });
