@@ -4,6 +4,9 @@
 	align-items: center;
 	align-content: center;
 	z-index: 10;
+		ul{
+			display: flex;
+			justify-content: space-between;
 			a {	
 				margin:0 calc-size(33);
 				position: relative;
@@ -26,10 +29,12 @@
 				&:last-child{
 					margin-right: 0;
 				}
-			}						
+			}
+		}						
 }
-.active {
+.nav.active {
 	display: flex!important;
+	opacity: 1; max-height: 10000px; overflow: hidden; visibility: visible;
 }
 
 @media only screen and(max-width: 767px) {
@@ -44,15 +49,11 @@
 		visibility: hidden;
 		transition: all 0.3s ease;
 		z-index: 4;
-
-		.active-overlay & {
-			opacity: 1;
-			visibility: visible;
-
-		}
 	}
 
 	.nav {
+		transition:all 0.5 ease;
+		opacity: 0; max-height: 0; overflow: hidden; visibility: hidden;
 		width: 100%;
 		display: none;
 		flex-direction: column;
@@ -61,24 +62,36 @@
 		left:0;
 		z-index: 3;
 		background-color: $primary-color;
-		a {
-			padding:calc-size(33) 0;
+		ul {
+			flex-direction: column;
 			width: 100%;
-			position: relative;
-			color: #fff;
-			font-size: mobile-size(14);
-			line-height:mobile-size(24); 
-			font-family: 'OpenSans' sans-serif;
-			text-align: center;
-			border-top: mobile-size(1) solid $second-color;
-			margin: 0;
-			&:last-child {
-				border-bottom: mobile-size(1) solid $second-color;
-			}
-			&:hover{
-				background-color: $second-color;
-				&::after {
-					display: none;
+			align-items: center;
+			li {
+				width: 100%;
+				position:relative;
+				text-align: center;
+				padding:calc-size(33) 0;
+				border-top: mobile-size(1) solid $second-color;
+				&:last-child {
+					border-bottom: mobile-size(1) solid $second-color;
+				}
+				&:hover{
+						background-color: $second-color;
+					}
+				a {
+					display:block;
+					width: 100%;
+					color: #fff;
+					font-size: mobile-size(14);
+					line-height:mobile-size(24); 
+					font-family: 'OpenSans' sans-serif;
+					text-align: center;
+					height: auto;
+					margin: 0;
+					
+						&::after {
+							display: none;
+						}
 				}
 			}
 		}
