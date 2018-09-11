@@ -16,14 +16,14 @@
             }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.header-container {
 		width: 90%;
 		padding: 0 mobile-size(10) mobile-size(37) 0 ;
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.header  {
 		flex-direction: column;
 		overflow: hidden;
@@ -44,7 +44,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 		.about {
 		
 		.about-container {
@@ -62,7 +62,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.container{
 		width: 90%;
 		.subscribe & {
@@ -73,7 +73,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 	.management {
 		padding: calc-size(130) 0;
 		h2{
@@ -143,7 +143,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 		.reviews {
 		h2 {
 			margin-bottom: mobile-size(90);
@@ -179,7 +179,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 		.subscribe {
 		padding: mobile-size(75) 0 mobile-size(43) 0;
 		h4 {
@@ -229,7 +229,7 @@
 	}
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
 		.footer {
 		padding: mobile-size(14) 0;
 		p { 
