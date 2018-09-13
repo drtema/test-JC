@@ -5,3 +5,7 @@
 @function mobile-size($size) {
 	@return (calc-size($size)*2.7);
 }
+
+@function tablet-size($size) {
+	@return (calc-size($size)*1.5);
+}

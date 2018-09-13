@@ -32,6 +32,30 @@
 		}						
 }
 
+@media only screen and(max-width: 992px) {
+	.nav {
+			ul{
+				li {
+					margin:0 tablet-size(15);
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+				a {	
+					font-size: tablet-size(14);
+					line-height:tablet-size(24); 
+					&:hover{
+						&:after {
+							transform: translate(-90%, tablet-size(100)/2- tablet-size(2));
+						    border-bottom: tablet-size(2) solid $second-color;
+						}
+					}
+					
+				}
+			}						
+	}
+}
+
 @media only screen and(max-width: 768px) {
 	#overlay {
 		background: rgba(#000, 0.5);

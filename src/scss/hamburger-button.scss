@@ -6,9 +6,9 @@ $hamburger-layer-height                    : mobile-size(5);
 $hamburger-layer-spacing                   : mobile-size(3);
 $hamburger-layer-color                     : #fff;
 $hamburger-layer-border-radius             : mobile-size(2);
-$hamburger-hover-opacity                   : 0.7 !default;
-$hamburger-hover-transition-duration       : 0.15s !default;
-$hamburger-hover-transition-timing-function: linear !default;
+$hamburger-hover-opacity                   : 0.7;
+$hamburger-hover-transition-duration       : 0.15s;
+$hamburger-hover-transition-timing-function: linear;
 
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
